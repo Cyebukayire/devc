@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "dart-sass": "^1.25.0",
+    "node-sass": "^7.0.1",
     "vue": "^3.0.0"
   },
   "devDependencies": {
