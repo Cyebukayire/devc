@@ -29,7 +29,7 @@
 
     <div ng-repeat="post in msgs">
       <div class="me">
-        {{post.text}}
+        hELLO MY TEXT
       </div>
       <!--<div class="person">
         {{reply}}
@@ -39,175 +39,166 @@
 
   </div>
 
-  <form name="submitTxt" class="message" ng-submit="addNew()">
-    <textarea ng-model="messg" ng-keyup="$event.keyCode == 13 && addNew()"></textarea>
-    <input type="submit" value="" class="send"></input>
+  <form name="submitTxt" class="message">
+    <textarea ></textarea>
+    <input type="submit" value="Send" class="send">
   </form>
 </div>
 </template>
 
 <style scoped>
-$first-gradient: #fff9c6
-$second-gradient: pink
-$third-gradient: #2a88b8
-$top-bar-bg: #f88187
-$message-bg: #fff
-$msg-border: #ed6262
-$msg-input: #ffddd4
-$app-bg: rgba(255, 255, 255, 0.7)
-$me-bg: #d4afaf
-$you-bg: #fff
-$you-font-color: #585656
-$me-font-color: #fff
-$typing-msg: #605f5f
-$send-button: rgba(0, 100, 200, 0.5)
-$send-button-hover: rgba(0, 100, 200, 0.8)
-$top-name: #fff
 
-* 
-  margin: 0
+* {
+  margin: 0;
   padding: 0
+}
 
-body
-  background: -webkit-linear-gradient(left top, $first-gradient, $second-gradient, $third-gradient) /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, $first-gradient, $second-gradient, $third-gradient) /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, $first-gradient, $second-gradient, $third-gradient) /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, $first-gradient, $second-gradient, $third-gradient) /* Standard syntax */
-  background-size: cover
-  background-attachment: fixed
-  background-repeat: no-repeat
-  height: 100vh
+body {
+  background: -webkit-linear-gradient(left top, #d8d7cd, pink, #2a88b8) /* For Safari 5.1 to 6.0 */;
+  background: -o-linear-gradient(bottom right, #d8d7cd, pink, #2a88b8) /* For Opera 11.1 to 12.0 */;
+  background: -moz-linear-gradient(bottom right, #d8d7cd, pink, #2a88b8) /* For Firefox 3.6 to 15 */;
+  background: linear-gradient(to bottom right, #d8d7cd, pink, #2a88b8) /* Standard syntax */;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;  
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+}
   
-  /* fonts */
-  font:
-    family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif
-    size: 62.5%
-  
-.app
-  overflow: hidden
-  position: relative
-  top: 50%
-  margin-top: -250px
-  margin-left: auto
-  margin-right: auto
-  width: 461px
-  height: 500px
-  background: $app-bg
-  border-radius: 0.5em
-  box-sizing: border-box
-  font-size: 1.5em
-  
-  .topbar
-    width: 100%
-    height: 40px
-    background: $top-bar-bg
-    border-top-left-radius: 0.5em
-    border-top-right-radius: 0.5em
-    text-align: center
-    color: $top-name
-    position: relative
+.app {
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  margin-top: -250px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 461px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  font-size: 1.5em;
+}
+.topbar {
+    width: 100%;
+    height: 40px;
+    background: #f88187;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+  .topbar strong {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      margin: 0 auto;
+  }
     
-    strong
-      position: absolute
-      left: 0
-      right: 0
-      top: 50%
-      transform: translateY(-50%)
-      -webkit-transform: translateY(-50%)
-      margin: 0 auto
+  .message{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    background: #fff;
+    border-top: 4px solid #ed6262;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    line-height: 1.7em;
+    transition: all ease 0.3s;
+    text-align: left;
+  }
     
-  .message
-    position: relative
-    width: 100%
-    height: 30px
-    bottom: 0
-    background: $message-bg
-    border-top: 4px solid $msg-border
-    border-bottom-left-radius: 0.5em
-    border-bottom-right-radius: 0.5em
-    line-height: 1.7em
-    transition: all ease 0.3s
-    text-align: left
-    
-    textarea
-      position: absolute
-      left: 10px
-      height: 30px
-      resize: none
-      width: 85%
-      background: transparent
-      box-sizing: border-box
-      top: 4.5px
-      height: 60%
-      font:
-        size: 1em
-      color: $typing-msg
-      float: left
-      padding-left: 5px
-      overflow: hidden
-      word-wrap: break-word
-      border: none
-      text-align: left
+  .message textarea {
+      position: absolute;
+      left: 10px;
+      height: 30px;
+      resize: none;
+      width: 85%;
+      background: transparent;
+      box-sizing: border-box;
+      top: 4.5px;
+      height: 60%;
+      font-size: 1em;
+      color: #605f5f;
+      float: left;
+      padding-left: 5px;
+      overflow: hidden;
+      word-wrap: break-word;
+      border: none;
+      text-align: left;
+  }
       
-      &:focus
-        //border: 3px solid $msg-input
-        outline: none
+   .message textarea:focus{
+        /* border: 3px solid #ffddd4; */
+        outline: none;
+   }
       
-    .send
-      position: absolute
-      width: 25px
-      height: 25px
-      background: orange
-      right: 10px
-      border-radius: 50%
-      border: none
-      background: $send-button
-      text-align: center
-      color: #fff
-      font-size: 1.1em
-      top: 50%
-      transform: translateY(-50%)
-      -webkit-transform: translateY(-50%)
+   .message textarea .send{
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: orange;
+      right: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0, 100, 200, 0.5);
+      text-align: center;
+      color: #fff;
+      font-size: 1.1em;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+   }
       
-      &:hover
-        background: $send-button-hover
+    .message textarea .send:hover {
+        background: rgba(0, 100, 200, 0.8);
+    }
     
-  .chat
-    overflow-y: auto
-    overflow-x: hidden
-    position: relative
-    height: 418px
-    line-height: 1.4
-    display: box
+  .chat {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    height: 418px;
+    line-height: 1.4;
+    display: box;
     
-    padding:
-      left: 10px
-      right: 10px
-      bottom: 5px
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
     
-    .person
-      float: left
-      clear: both
-      max-width: 80%
-      background: $me-bg
-      border-radius: 0.5em
-      padding: 7px
-      margin-top: 10px
-      color: $me-font-color
-      min-width: 2%
-      word-wrap: break-word
+  .chat .person{
+      float: left;
+      clear: both;
+      max-width: 80%;
+      background: #d4afaf;
+      border-radius: 0.5em;
+      padding: 7px;
+      margin-top: 10px;
+      color: #fff;
+      min-width: 2%;
+      word-wrap: break-word;
+    }
       
-    .me
-      float: right
-      clear: both
-      max-width: 80%
-      background: $you-bg
-      text-align: right
-      border-radius: 0.5em
-      padding: 7px
-      margin-top: 10px
-      color: $you-font-color
-      min-width: 2%
-      word-wrap: break-word
+  .chat .me{
+      float: right;
+      clear: both;
+      max-width: 80%;
+      background: #fff;
+      text-align: right;
+      border-radius: 0.5em;
+      padding: 7px;
+      margin-top: 10px;
+      color: #585656;
+      min-width: 2%;
+      word-wrap: break-word;
+    }
      
 </style>

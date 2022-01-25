@@ -1,5 +1,6 @@
 <template>
   <Join/>
+  <router-view/>
 </template>
 
 <script>

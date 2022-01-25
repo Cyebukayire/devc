@@ -10,10 +10,12 @@
 
 <script>
 export default {
-    name: 'Join',
+  name: "Join",
+  setup() {
+    
+  },
 }
 </script>
-
 <style scoped>
 /* .join{
     position: relative;
