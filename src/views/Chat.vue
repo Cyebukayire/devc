@@ -167,7 +167,7 @@ body {
     position: relative;
     height: 418px;
     line-height: 1.4;
-    display: box;
+    display: flex;
     
     padding-left: 10px;
     padding-right: 10px;

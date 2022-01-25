@@ -1,10 +1,13 @@
 <template>
     <div class="join">
-         <form class="box" method="">
+         <div class="box">
       <h1>Dev C</h1>
       <input type="text" name="" placeholder="Username">
-      <input type="submit" value="Join">
-    </form>
+      <router-link to="/chat">
+        <input type="submit" value="Join">
+      </router-link>
+      
+    </div>
     </div>
 </template>
 

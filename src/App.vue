@@ -1,15 +1,10 @@
 <template>
-  <Join/>
   <router-view/>
 </template>
 
 <script>
-import Join from './components/Join.vue'
 export default {
   name: 'App',
-  components: {
-    Join
-  }
 }
 </script>
 
