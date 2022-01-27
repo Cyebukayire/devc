@@ -52,13 +52,14 @@ export default {
   display: block;
   margin: 5px auto;
   text-align: center;
-  border: 2px solid #eff3f7;
+  border: 2px solid #cae5ff;
   padding: 14px 10px;
   width: 200px;
   outline: none;
-  color: white;
+  color: rgb(107, 112, 119);
   border-radius: 24px;
   transition: 0.5s;
+  font-size: 18px;
 }
 .box input[type = "text"]:focus{
   border-color: #87bfff;
@@ -70,10 +71,12 @@ export default {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid white;
+  border: 2px solid #cae5ff;
   padding: 14px 40px;
   outline: none;
-  color: white;
+  font-style: normal;
+  font-size: 18px;
+  color: rgb(107, 112, 119);
   transition: 0.25s;
   cursor: pointer;
 }
@@ -83,6 +86,9 @@ export default {
 .box input[type = "submit"]:hover{
   /* background: #D4AC0D; */
   border-radius: 24px;
+}
+a{
+  text-decoration: none;
 }
 
 
