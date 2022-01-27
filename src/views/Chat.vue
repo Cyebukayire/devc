@@ -43,7 +43,7 @@
 					<h2>Musa_Coder</h2>
 					<h3>10:12AM, Today</h3>
 				</div>
-				<!-- <div class="triangle"></div> -->
+				<div class="triangle"></div>
 				<div class="message">
 					Yooo, I've been coding since morning, it's sad I can't feel hunger.
 				</div>
@@ -76,7 +76,7 @@
 					<h2>Vincent</h2>
 					<h3>10:12AM, Today</h3>
 				</div>
-				<!-- <div class="triangle"></div> -->
+				<div class="triangle"></div>
 				<div class="message">
 					ohhh yeah, I need a break
 				</div>
@@ -136,14 +136,6 @@ body{
   margin-left:0px;
 	overflow:hidden;
 }
-aside{
-	width:260px;
-	height:800px;
-	background-color:#011c35;
-	display:inline-block;
-	font-size:15px;
-	vertical-align:top;
-}
 main{
 	width:490px;
 	height:800px;
@@ -152,54 +144,9 @@ main{
 	vertical-align:top;
 }
 
-aside header{
-	padding:30px 20px;
-}
-aside h1{
-  color: #87bfff;
-  /* text-transform: uppercase; */
-  font-weight: 500;
-  text-align: center;
-}
-aside input::placeholder{
-	color:#fff;
-}
-aside ul{
-	padding-left:0;
-	margin:0;
-	list-style-type:none;
-	overflow-y:scroll;
-	height:690px;
-}
-aside li{
-	padding:10px 0;
-}
-aside li:hover{
-	background-color:#5e616a;
-}
+
 h2,h3{
 	margin:0;
-}
-aside li img{
-	border-radius:50%;
-	margin-left:20px;
-	margin-right:8px;
-}
-aside li div{
-	display:inline-block;
-	vertical-align:top;
-	margin-top:12px;
-}
-aside li h2{
-	font-size:14px;
-	color:#fff;
-	font-weight:normal;
-	margin-bottom:5px;
-}
-aside li h3{
-	font-size:12px;
-	color:#7e818a;
-	font-weight:normal;
 }
 
 .status{
@@ -285,8 +232,11 @@ main header h3{
 #chat .me{
 	text-align:right;
 }
+#chat .you {
+  text-align: left;
+}
 #chat .you .message{
-	background-color:#58b666;
+	background-color:#58b666c5;
 }
 #chat .me .message{
 	background-color:#6fbced;
