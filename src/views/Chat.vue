@@ -1,204 +1,349 @@
 <template>
-    <div class="app" ng-app="chatSystem" ng-controller="MainCtrl">
-  <div class="topbar">
-    <strong>Anna</strong>
-  </div>
-  <div class="chat" id="chat">
-
-    <div class="person">
-      Hey</div>
-    <div class="person">
-      Type whatever you want below.</div>
-    <div class="person">
-      Press enter or click the blue circle to send</div>
-    <div class="person">
-      I can't reply yet... Maybe one day.</div>
-
-    <!--<div class="me">
-      yeah u gotta' file once every 2 weeks at least</div>
-    <div class="me">
-      and u gotta' groom eyebrows once every 10 days at least</div>
-    <div class="me">
-      most*??
-    </div>
-
-    <div class="person">
-      you females have it tough im sorry</div>
-    <div class="person">
-      So much to maintain</div>-->
-
-    <div ng-repeat="post in msgs">
-      <div class="me">
-        hELLO MY TEXT
-      </div>
-      <!--<div class="person">
-        {{reply}}
-      </div>-->
-    </div>
-
-
-  </div>
-
-  <form name="submitTxt" class="message">
-    <textarea ></textarea>
-    <input type="submit" value="Send" class="send">
-  </form>
+<div id="container">
+	<aside>
+		<header>
+			<h1>DEV C</h1>
+		</header>
+		<ul>
+			<li>
+				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+				<div>
+					<h2>Musa_Coder</h2>
+					<h3>
+						<span class="status orange"></span>
+						offline
+					</h3>
+				</div>
+			</li>
+			<li>
+				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg" alt="">
+				<div>
+					<h2>Hack_Prince</h2>
+					<h3>
+						<span class="status green"></span>
+						online
+					</h3>
+				</div>
+			</li>
+		</ul>
+	</aside>
+	<main>
+		<header>
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+			<div>
+				<h2>Chat with Vincent Porter</h2>
+				<h3>already 1902 messages</h3>
+			</div>
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" alt="">
+		</header>
+		<ul id="chat">
+			<li class="you">
+				<div class="entete">
+					<span class="status green"></span>
+					<h2>Vincent</h2>
+					<h3>10:12AM, Today</h3>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<h3>10:12AM, Today</h3>
+					<h2>Vincent</h2>
+					<span class="status blue"></span>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<h3>10:12AM, Today</h3>
+					<h2>Vincent</h2>
+					<span class="status blue"></span>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					OK
+				</div>
+			</li>
+			<li class="you">
+				<div class="entete">
+					<span class="status green"></span>
+					<h2>Vincent</h2>
+					<h3>10:12AM, Today</h3>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<h3>10:12AM, Today</h3>
+					<h2>Vincent</h2>
+					<span class="status blue"></span>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<h3>10:12AM, Today</h3>
+					<h2>Vincent</h2>
+					<span class="status blue"></span>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					OK
+				</div>
+			</li>
+		</ul>
+		<footer>
+			<textarea placeholder="Type your message"></textarea>
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png" alt="">
+			<a href="#">Send</a>
+		</footer>
+	</main>
 </div>
 </template>
 
 <style scoped>
-
-* {
+*{
+	box-sizing:border-box;
   margin: 0;
-  padding: 0
+  padding: 0;
+}
+body{
+	background-color:#abd9e9;
+	font-family:Arial;
+}
+#container{
+	/* width:750px;
+	height:800px; */
+  width: 100%;
+  height: 100%;
+	background:#eff3f7;
+	margin:0;
+	font-size:0;
+	border-radius:5px;
+  margin-left:0px;
+	overflow:hidden;
+}
+aside{
+	width:260px;
+	height:800px;
+	background-color:#3b3e49;
+	display:inline-block;
+	font-size:15px;
+	vertical-align:top;
+}
+main{
+	width:490px;
+	height:800px;
+	display:inline-block;
+	font-size:15px;
+	vertical-align:top;
 }
 
-body {
-  background: -webkit-linear-gradient(left top, #d8d7cd, pink, #2a88b8) /* For Safari 5.1 to 6.0 */;
-  background: -o-linear-gradient(bottom right, #d8d7cd, pink, #2a88b8) /* For Opera 11.1 to 12.0 */;
-  background: -moz-linear-gradient(bottom right, #d8d7cd, pink, #2a88b8) /* For Firefox 3.6 to 15 */;
-  background: linear-gradient(to bottom right, #d8d7cd, pink, #2a88b8) /* Standard syntax */;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 100vh;  
-  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 62.5%;
+aside header{
+	padding:30px 20px;
 }
-  
-.app {
-  overflow: hidden;
-  position: relative;
-  top: 50%;
-  margin-top: -250px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 461px;
-  height: 500px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 0.5em;
-  box-sizing: border-box;
-  font-size: 1.5em;
+aside input{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	padding:0 50px 0 20px;
+	background-color:#5e616a;
+	border:none;
+	border-radius:3px;
+	color:#fff;
+	background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_search.png);
+	background-repeat:no-repeat;
+	background-position:170px;
+	background-size:40px;
 }
-.topbar {
-    width: 100%;
-    height: 40px;
-    background: #f88187;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    text-align: center;
-    color: #fff;
-    position: relative;
+aside input::placeholder{
+	color:#fff;
+}
+aside ul{
+	padding-left:0;
+	margin:0;
+	list-style-type:none;
+	overflow-y:scroll;
+	height:690px;
+}
+aside li{
+	padding:10px 0;
+}
+aside li:hover{
+	background-color:#5e616a;
+}
+h2,h3{
+	margin:0;
+}
+aside li img{
+	border-radius:50%;
+	margin-left:20px;
+	margin-right:8px;
+}
+aside li div{
+	display:inline-block;
+	vertical-align:top;
+	margin-top:12px;
+}
+aside li h2{
+	font-size:14px;
+	color:#fff;
+	font-weight:normal;
+	margin-bottom:5px;
+}
+aside li h3{
+	font-size:12px;
+	color:#7e818a;
+	font-weight:normal;
 }
 
-  .topbar strong {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      margin: 0 auto;
-  }
-    
-  .message{
-    position: relative;
-    width: 100%;
-    height: 30px;
-    bottom: 0;
-    background: #fff;
-    border-top: 4px solid #ed6262;
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    line-height: 1.7em;
-    transition: all ease 0.3s;
-    text-align: left;
-  }
-    
-  .message textarea {
-      position: absolute;
-      left: 10px;
-      height: 30px;
-      resize: none;
-      width: 85%;
-      background: transparent;
-      box-sizing: border-box;
-      top: 4.5px;
-      height: 60%;
-      font-size: 1em;
-      color: #605f5f;
-      float: left;
-      padding-left: 5px;
-      overflow: hidden;
-      word-wrap: break-word;
-      border: none;
-      text-align: left;
-  }
-      
-   .message textarea:focus{
-        /* border: 3px solid #ffddd4; */
-        outline: none;
-   }
-      
-   .message textarea .send{
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      background: orange;
-      right: 10px;
-      border-radius: 50%;
-      border: none;
-      background: rgba(0, 100, 200, 0.5);
-      text-align: center;
-      color: #fff;
-      font-size: 1.1em;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-   }
-      
-    .message textarea .send:hover {
-        background: rgba(0, 100, 200, 0.8);
-    }
-    
-  .chat {
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: relative;
-    height: 418px;
-    line-height: 1.4;
-    display: flex;
-    
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-  }
-    
-  .chat .person{
-      float: left;
-      clear: both;
-      max-width: 80%;
-      background: #d4afaf;
-      border-radius: 0.5em;
-      padding: 7px;
-      margin-top: 10px;
-      color: #fff;
-      min-width: 2%;
-      word-wrap: break-word;
-    }
-      
-  .chat .me{
-      float: right;
-      clear: both;
-      max-width: 80%;
-      background: #fff;
-      text-align: right;
-      border-radius: 0.5em;
-      padding: 7px;
-      margin-top: 10px;
-      color: #585656;
-      min-width: 2%;
-      word-wrap: break-word;
-    }
-     
+.status{
+	width:8px;
+	height:8px;
+	border-radius:50%;
+	display:inline-block;
+	margin-right:7px;
+}
+.green{
+	background-color:#58b666;
+}
+.orange{
+	background-color:#ff725d;
+}
+.blue{
+	background-color:#6fbced;
+	margin-right:0;
+	margin-left:7px;
+}
+
+main header{
+	height:110px;
+	padding:30px 20px 30px 40px;
+}
+main header > *{
+	display:inline-block;
+	vertical-align:top;
+}
+main header img:first-child{
+	border-radius:50%;
+}
+main header img:last-child{
+	width:24px;
+	margin-top:8px;
+}
+main header div{
+	margin-left:10px;
+	margin-right:145px;
+}
+main header h2{
+	font-size:16px;
+	margin-bottom:5px;
+}
+main header h3{
+	font-size:14px;
+	font-weight:normal;
+	color:#7e818a;
+}
+
+#chat{
+	padding-left:0;
+	margin:0;
+	list-style-type:none;
+	overflow-y:scroll;
+	height:535px;
+	border-top:2px solid #fff;
+	border-bottom:2px solid #fff;
+}
+#chat li{
+	padding:10px 30px;
+}
+#chat h2,#chat h3{
+	display:inline-block;
+	font-size:13px;
+	font-weight:normal;
+}
+#chat h3{
+	color:#bbb;
+}
+#chat .entete{
+	margin-bottom:5px;
+}
+#chat .message{
+	padding:20px;
+	color:#fff;
+	line-height:25px;
+	max-width:90%;
+	display:inline-block;
+	text-align:left;
+	border-radius:5px;
+}
+#chat .me{
+	text-align:right;
+}
+#chat .you .message{
+	background-color:#58b666;
+}
+#chat .me .message{
+	background-color:#6fbced;
+}
+#chat .triangle{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 10px 10px 10px;
+}
+#chat .you .triangle{
+		border-color: transparent transparent #58b666 transparent;
+		margin-left:15px;
+}
+#chat .me .triangle{
+		border-color: transparent transparent #6fbced transparent;
+		margin-left:375px;
+}
+
+main footer{
+	height:155px;
+	padding:20px 30px 10px 20px;
+}
+main footer textarea{
+	resize:none;
+	border:none;
+	display:block;
+	width:100%;
+	height:80px;
+	border-radius:3px;
+	padding:20px;
+	font-size:13px;
+	margin-bottom:13px;
+}
+main footer textarea::placeholder{
+	color:#ddd;
+}
+main footer img{
+	height:30px;
+	cursor:pointer;
+}
+main footer a{
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#6fbced;
+	vertical-align:top;
+	margin-left:333px;
+	margin-top:5px;
+	display:inline-block;
+}
 </style>
