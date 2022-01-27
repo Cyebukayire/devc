@@ -2,12 +2,11 @@
 <div id="container">
 	<main>
 		<header>
-			<!-- <img src="https://o.remove.bg/downloads/6a9c6e83-ae2a-4f75-9ae9-b8ffe7114d0f/msg-removebg-preview.png" alt=""> -->
+			<img src="../assets/logo1.png" alt="">
 			<div>
-				<h2>Programmers' random chat</h2>
+				<h2>Developers' Random Chat</h2>
 				<h3>Chat with a stranger</h3>
 			</div>
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" alt="logo">
 		</header>
 		<ul id="chat">
 			<li class="you">
@@ -46,7 +45,7 @@
 			<li class="you">
 				<div class="entete">
 					<span class="status green"></span>
-					<h2>Vincent</h2>
+					<h2>Musa_Coder</h2>
 					<h3>10:12AM, Today</h3>
 				</div>
 				<div class="triangle"></div>
@@ -161,6 +160,7 @@ main header > *{
 }
 main header img:first-child{
 	border-radius:50%;
+  width: 15%;
 }
 main header img:last-child{
 	width:24px;
