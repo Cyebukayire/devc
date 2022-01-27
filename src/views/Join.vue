@@ -36,7 +36,7 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background: #011c35;
+  background: white;
   text-align: center;
   border-radius: 20px 20px;
 }
@@ -52,7 +52,7 @@ export default {
   display: block;
   margin: 5px auto;
   text-align: center;
-  border: 2px solid white;
+  border: 2px solid #eff3f7;
   padding: 14px 10px;
   width: 200px;
   outline: none;

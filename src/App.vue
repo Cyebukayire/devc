@@ -13,7 +13,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /* background: #e6dffa; */
+  background: #eff3f7;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

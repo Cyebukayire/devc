@@ -1,32 +1,5 @@
 <template>
 <div id="container">
-	<!-- <aside>
-		<header>
-			<h1>DEV C</h1>
-		</header>
-		<ul>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
-				<div>
-					<h2>Musa_Coder</h2>
-					<h3>
-						<span class="status orange"></span>
-						offline
-					</h3>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg" alt="">
-				<div>
-					<h2>Hack_Prince</h2>
-					<h3>
-						<span class="status green"></span>
-						online
-					</h3>
-				</div>
-			</li>
-		</ul>
-	</aside> -->
 	<main>
 		<header>
 			<!-- <img src="https://o.remove.bg/downloads/6a9c6e83-ae2a-4f75-9ae9-b8ffe7114d0f/msg-removebg-preview.png" alt=""> -->
@@ -34,7 +7,7 @@
 				<h2>Programmers' random chat</h2>
 				<h3>Chat with a stranger</h3>
 			</div>
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" alt="">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" alt="logo">
 		</header>
 		<ul id="chat">
 			<li class="you">
@@ -121,9 +94,12 @@
   padding: 0;
 }
 body{
-	background-color:#abd9e9;
+	/* background-color:#abd9e9; */
 	font-family:Arial;
+  height: 100%;
+  width: 100%;
 }
+
 #container{
 	/* width:750px;
 	height:800px; */
@@ -142,6 +118,13 @@ main{
 	display:inline-block;
 	font-size:15px;
 	vertical-align:top;
+}
+
+h1 {
+  color: #87bfff;
+  /* text-transform: uppercase; */
+  font-weight: 500;
+  text-align: center;
 }
 
 
