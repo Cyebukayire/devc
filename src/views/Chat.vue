@@ -1,6 +1,6 @@
 <template>
 <div id="container">
-	<aside>
+	<!-- <aside>
 		<header>
 			<h1>DEV C</h1>
 		</header>
@@ -26,13 +26,13 @@
 				</div>
 			</li>
 		</ul>
-	</aside>
+	</aside> -->
 	<main>
 		<header>
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+			<!-- <img src="https://o.remove.bg/downloads/6a9c6e83-ae2a-4f75-9ae9-b8ffe7114d0f/msg-removebg-preview.png" alt=""> -->
 			<div>
-				<h2>Chat with Vincent Porter</h2>
-				<h3>already 1902 messages</h3>
+				<h2>Programmers' random chat</h2>
+				<h3>Chat with a stranger</h3>
 			</div>
 			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" alt="">
 		</header>
@@ -40,34 +40,34 @@
 			<li class="you">
 				<div class="entete">
 					<span class="status green"></span>
-					<h2>Vincent</h2>
+					<h2>Musa_Coder</h2>
 					<h3>10:12AM, Today</h3>
 				</div>
-				<div class="triangle"></div>
+				<!-- <div class="triangle"></div> -->
 				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					Yooo, I've been coding since morning, it's sad I can't feel hunger.
 				</div>
 			</li>
 			<li class="me">
 				<div class="entete">
-					<h3>10:12AM, Today</h3>
+					<h3> 10:13AM, Today </h3>
+					<h2>Hack_Prince</h2>
+					<span class="status blue"></span>
+				</div>
+				<div class="triangle"></div>
+				<div class="message">
+					hahahhh I get you bro
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<h3> 10:12AM, Today </h3>
 					<h2>Vincent</h2>
 					<span class="status blue"></span>
 				</div>
 				<div class="triangle"></div>
 				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<h3>10:12AM, Today</h3>
-					<h2>Vincent</h2>
-					<span class="status blue"></span>
-				</div>
-				<div class="triangle"></div>
-				<div class="message">
-					OK
+					you should get out and stretch your ass
 				</div>
 			</li>
 			<li class="you">
@@ -76,31 +76,31 @@
 					<h2>Vincent</h2>
 					<h3>10:12AM, Today</h3>
 				</div>
-				<div class="triangle"></div>
+				<!-- <div class="triangle"></div> -->
 				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					ohhh yeah, I need a break
 				</div>
 			</li>
 			<li class="me">
 				<div class="entete">
 					<h3>10:12AM, Today</h3>
-					<h2>Vincent</h2>
+					<h2>Hack_Prince</h2>
 					<span class="status blue"></span>
 				</div>
 				<div class="triangle"></div>
 				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					Ama get a coffee too
 				</div>
 			</li>
 			<li class="me">
 				<div class="entete">
 					<h3>10:12AM, Today</h3>
-					<h2>Vincent</h2>
+					<h2>Hack_Prince</h2>
 					<span class="status blue"></span>
 				</div>
 				<div class="triangle"></div>
 				<div class="message">
-					OK
+					I love this poor chat, it relaxes me in some ways
 				</div>
 			</li>
 		</ul>
@@ -139,7 +139,7 @@ body{
 aside{
 	width:260px;
 	height:800px;
-	background-color:#3b3e49;
+	background-color:#011c35;
 	display:inline-block;
 	font-size:15px;
 	vertical-align:top;
@@ -155,19 +155,11 @@ main{
 aside header{
 	padding:30px 20px;
 }
-aside input{
-	width:100%;
-	height:50px;
-	line-height:50px;
-	padding:0 50px 0 20px;
-	background-color:#5e616a;
-	border:none;
-	border-radius:3px;
-	color:#fff;
-	background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_search.png);
-	background-repeat:no-repeat;
-	background-position:170px;
-	background-size:40px;
+aside h1{
+  color: #87bfff;
+  /* text-transform: uppercase; */
+  font-weight: 500;
+  text-align: center;
 }
 aside input::placeholder{
 	color:#fff;
