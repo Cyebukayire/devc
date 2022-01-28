@@ -59,7 +59,7 @@ export default {
   color: rgb(107, 112, 119);
   border-radius: 24px;
   transition: 0.5s;
-  font-size: 18px;
+  font-size: 16px;
 }
 .box input[type = "text"]:focus{
   border-color: #87bfff;

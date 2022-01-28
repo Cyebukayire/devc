@@ -8,74 +8,7 @@
 				<h3>Chat with a stranger</h3>
 			</div>
 		</header>
-		<ul id="chat">
-			<li class="you">
-				<div class="entete">
-					<span class="status green"></span>
-					<h2>Musa_Coder</h2>
-					<h3>10:12AM, Today</h3>
-				</div>
-				<div class="triangle"></div>
-				<div class="message">
-					Yooo, I've been coding since morning, it's sad I can't feel hunger.
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<h3> 10:13AM, Today </h3>
-					<h2>Hack_Prince</h2>
-					<span class="status blue"></span>
-				</div>
-				<div class="triangle"></div>
-				<div class="message">
-					hahahhh I get you bro
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<h3> 10:12AM, Today </h3>
-					<h2>Vincent</h2>
-					<span class="status blue"></span>
-				</div>
-				<div class="triangle"></div>
-				<div class="message">
-					you should get out and stretch your ass
-				</div>
-			</li>
-			<li class="you">
-				<div class="entete">
-					<span class="status green"></span>
-					<h2>Musa_Coder</h2>
-					<h3>10:12AM, Today</h3>
-				</div>
-				<div class="triangle"></div>
-				<div class="message">
-					ohhh yeah, I need a break
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<h3>10:12AM, Today</h3>
-					<h2>Hack_Prince</h2>
-					<span class="status blue"></span>
-				</div>
-				<div class="triangle"></div>
-				<div class="message">
-					Ama get a coffee too
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<h3>10:12AM, Today</h3>
-					<h2>Hack_Prince</h2>
-					<span class="status blue"></span>
-				</div>
-				<div class="triangle"></div>
-				<div class="message">
-					I love this poor chat, it relaxes me in some ways
-				</div>
-			</li>
-		</ul>
+		<Messages/>
 		<footer>
 			<textarea placeholder="Type your message"></textarea>
 			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
@@ -87,10 +20,21 @@
 </template>
 
 <script>
+import { users } from '../assets/users'
+import Messages from '../components/Messages.vue'
+// import { reactive } from 'vue'
+
 export default {
 	name: 'Chat',
+	components: {
+		Messages
+	},
 	setup() {
-		
+		// const state = reactive({
+		// })
+		return {
+			users
+		}		
 	},
 }
 </script>
@@ -188,66 +132,7 @@ main header h3{
 	font-weight:normal;
 	color:#7e818a;
 }
-
-#chat{
-	padding-left:0;
-	margin:0;
-	list-style-type:none;
-	overflow-y:scroll;
-	height:535px;
-	border-top:2px solid #fff;
-	border-bottom:2px solid #fff;
-}
-#chat li{
-	padding:10px 30px;
-}
-#chat h2,#chat h3{
-	display:inline-block;
-	font-size:13px;
-	font-weight:normal;
-}
-#chat h3{
-	color:#bbb;
-}
-#chat .entete{
-	margin-bottom:5px;
-}
-#chat .message{
-	padding:20px;
-	color:#fff;
-	line-height:25px;
-	max-width:90%;
-	display:inline-block;
-	text-align:left;
-	border-radius:5px;
-}
-#chat .me{
-	text-align:right;
-}
-#chat .you {
-  text-align: left;
-}
-#chat .you .message{
-	background-color:#58b666;
-}
-#chat .me .message{
-	background-color:#6fbced;
-}
-#chat .triangle{
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 10px 10px 10px;
-}
-#chat .you .triangle{
-		border-color: transparent transparent #58b666 transparent;
-		margin-left:15px;
-}
-#chat .me .triangle{
-		border-color: transparent transparent #6fbced transparent;
-		margin-left:375px;
-}
-
+/* Footer */
 main footer{
 	height:155px;
 	padding:20px 30px 10px 20px;
@@ -260,8 +145,13 @@ main footer textarea{
 	height:80px;
 	border-radius:3px;
 	padding:20px;
-	font-size:13px;
+	font-size:16px;
 	margin-bottom:13px;
+}
+main footer textarea:focus {
+	outline: none !important;
+	border: 2px solid #cae5ff;
+	
 }
 main footer textarea::placeholder{
 	color:#ddd;
