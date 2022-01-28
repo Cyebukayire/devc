@@ -9,12 +9,7 @@
 			</div>
 		</header>
 		<Messages/>
-		<footer>
-			<textarea placeholder="Type your message"></textarea>
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png" alt="">
-			<a href="#">Send</a>
-		</footer>
+		<CreateMessage/>
 	</main>
 </div>
 </template>
@@ -22,12 +17,14 @@
 <script>
 import { users } from '../assets/users'
 import Messages from '../components/Messages.vue'
+import CreateMessage from '../components/CreateMessage.vue'
 // import { reactive } from 'vue'
 
 export default {
 	name: 'Chat',
 	components: {
-		Messages
+		Messages,
+		CreateMessage
 	},
 	setup() {
 		// const state = reactive({
@@ -131,43 +128,5 @@ main header h3{
 	font-size:14px;
 	font-weight:normal;
 	color:#7e818a;
-}
-/* Footer */
-main footer{
-	height:155px;
-	padding:20px 30px 10px 20px;
-}
-main footer textarea{
-	resize:none;
-	border:none;
-	display:block;
-	width:100%;
-	height:80px;
-	border-radius:3px;
-	padding:20px;
-	font-size:16px;
-	margin-bottom:13px;
-}
-main footer textarea:focus {
-	outline: none !important;
-	border: 2px solid #cae5ff;
-	
-}
-main footer textarea::placeholder{
-	color:#ddd;
-}
-main footer img{
-	height:30px;
-	cursor:pointer;
-}
-main footer a{
-	text-decoration:none;
-	text-transform:uppercase;
-	font-weight:bold;
-	color:#6fbced;
-	vertical-align:top;
-	margin-left:333px;
-	margin-top:5px;
-	display:inline-block;
 }
 </style>
