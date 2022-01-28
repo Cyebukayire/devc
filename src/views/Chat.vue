@@ -86,6 +86,15 @@
 </div>
 </template>
 
+<script>
+export default {
+	name: 'Chat',
+	setup() {
+		
+	},
+}
+</script>
+
 <style scoped>
 *{
 	box-sizing:border-box;
@@ -219,7 +228,7 @@ main header h3{
   text-align: left;
 }
 #chat .you .message{
-	background-color:#58b666c5;
+	background-color:#58b666;
 }
 #chat .me .message{
 	background-color:#6fbced;
