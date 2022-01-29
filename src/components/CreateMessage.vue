@@ -1,14 +1,35 @@
 <template>
     
 		<footer>
-			<textarea placeholder="Type your message"></textarea>
+			<!-- HELLO T -->
+			<textarea placeholder="Type your message" v-model="state.messageContent"></textarea>
 			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
 			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png" alt="">
-			<a href="#">Send</a>
+			<!-- <a href="#">Send</a> -->
+			<!-- <button>SEND</button> -->
+			<!-- {{state.messageContent}} -->
+
+			<!-- Working on Word Counter in the textarea -->
 		</footer>
 
 </template>
 
+<script>
+import { reactive } from 'vue'
+export default {
+	name: "CreateMessage",
+	setup() {
+		const state = reactive({
+			messageContent: '',
+		})
+		
+	return {
+		state,
+	}
+
+	},
+}
+</script>
 <style scoped>
 
 /* Footer */
@@ -33,7 +54,8 @@ footer textarea:focus {
 	
 }
 footer textarea::placeholder{
-	color:#ddd;
+	color:rgb(153, 156, 158);
+	font-size: 16px;
 }
 footer img{
 	height:30px;
