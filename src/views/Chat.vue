@@ -101,8 +101,8 @@ h2,h3{
 }
 
 main header{
-	height:110px;
-	padding:30px 20px 30px 40px;
+	height:90px;
+	padding:30px 0 0 40px;
 }
 main header > *{
 	display:inline-block;
