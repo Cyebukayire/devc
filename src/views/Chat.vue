@@ -8,6 +8,9 @@
 				<h3>Chat with a stranger</h3>
 			</div>
 		</header>
+		<ul id="chat">
+			<Message/>
+		</ul>
 		<CreateMessage/>
 	</main>
 </div>
@@ -15,17 +18,19 @@
 
 <script>
 import { users } from '../assets/users'
+import Message from '../components/Message.vue'
 import CreateMessage from '../components/CreateMessage.vue'
 // import { reactive } from 'vue'
 
 export default {
 	name: 'Chat',
 	components: {
+		Message,
 		CreateMessage
 	},
 	setup() {
-		// const state = reactive({
-		// })
+		const state = reactive({
+		})
 		return {
 			users
 		}		

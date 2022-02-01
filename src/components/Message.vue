@@ -2,12 +2,12 @@
 			<li class="you">
 				<div class="entete">
 					<span class="status green"></span>
-					<h2>{{username}}</h2>
+					<h2>Peace-pro</h2>
 					<h3>10:12AM, Today</h3>
 				</div>
 				<div class="triangle"></div>
 				<div class="message">
-					{{message}}
+					<!-- {{message}} --> Message here
 				</div>
 			</li>
 </template>

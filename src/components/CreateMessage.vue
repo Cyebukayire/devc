@@ -1,9 +1,5 @@
 <template>
     
-		<ul id="chat">
-			<Message/>
-		</ul>
-
 		<footer>
 			<!-- HELLO T -->
 			<div class="character-counter" :class="{ '--exceeded-color': msg_character_counter > 180}">{{msg_character_counter}}/180</div>
@@ -17,13 +13,8 @@
 
 <script>
 import { reactive, computed } from 'vue'
-import Message from './Message.vue'
-
 export default {
 	name: "CreateMessage",
-	props: {
-		Message
-	},
 	setup(props, ctx) {
 		const state = reactive({
 			messageContent: '',
