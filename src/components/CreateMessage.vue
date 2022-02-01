@@ -1,29 +1,44 @@
 <template>
     
+		<ul id="chat">
+			<Message/>
+		</ul>
+
 		<footer>
 			<!-- HELLO T -->
 			<div class="character-counter" :class="{ '--exceeded-color': msg_character_counter > 180}">{{msg_character_counter}}/180</div>
 			<textarea placeholder="Type your message" :class="{ '--exceeded-border': msg_character_counter > 180}" v-model="state.messageContent"/>
 			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
 			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png" alt="">
-			<router-link to="#">Send</router-link>
+			<router-link @submit="createMessage()" to="#">Send</router-link>
 		</footer>
 
 </template>
 
 <script>
 import { reactive, computed } from 'vue'
+import Message from './Message.vue'
+
 export default {
 	name: "CreateMessage",
-	setup() {
+	props: {
+		Message
+	},
+	setup(props, ctx) {
 		const state = reactive({
 			messageContent: '',
 		})
 		const msg_character_counter = computed( () => state.messageContent.length)
-		
+		function createMessage() {
+			if((state.messageContent.length <= 180 && state.messageContent.length != 0)) {
+				ctx.emit('new-message', state.messageContent)
+				state.messageContent = ""
+			}			
+		}
 	return {
 		state,
 		msg_character_counter,
+		createMessage
 	}
 
 	},
