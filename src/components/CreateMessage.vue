@@ -21,8 +21,10 @@ export default {
 		})
 		const msg_character_counter = computed( () => state.messageContent.length)
 		function createMessage() {
+			console.log("function called bro")
 			if((state.messageContent.length <= 180 && state.messageContent.length != 0)) {
 				ctx.emit('new-message', state.messageContent)
+				console.log(state.messageContent)
 				state.messageContent = ""
 			}			
 		}

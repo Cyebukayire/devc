@@ -2,8 +2,8 @@
     <div class="join">
          <div class="box">
       <h1>Dev C</h1>
-      <input type="text" name="" placeholder="Username">
-      <router-link to="/chat">
+      <input type="text" name="" v-model="state.active_user" placeholder="Username">
+      <router-link to="/chat" :active_user="state.username">
         <input type="submit" value="Join">
       </router-link>
       
@@ -12,10 +12,18 @@
 </template>
 
 <script>
+import { reactive } from 'vue'
+
 export default {
   name: "Join",
   setup() {
-    
+    const state = reactive({
+      active_user: ''
+    })    
+
+    return {
+      state,
+    }
   },
 }
 </script>

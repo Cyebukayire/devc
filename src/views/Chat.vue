@@ -29,8 +29,8 @@ export default {
 		CreateMessage
 	},
 	setup() {
-		const state = reactive({
-		})
+		// const state = reactive({
+		// })
 		return {
 			users
 		}		
