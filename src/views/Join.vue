@@ -1,28 +1,43 @@
 <template>
     <div class="join">
+      <form @submit.prevent="joinChat()">
          <div class="box">
-      <h1>Dev C</h1>
-      <input type="text" name="" v-model="state.active_user" placeholder="Username">
-      <router-link to="/chat" :active_user="state.username">
-        <input type="submit" value="Join">
-      </router-link>
-      
-    </div>
+          <h1>Dev C</h1>
+          <input type="text" name="" v-model="state.active_user" placeholder="Username">
+            <button type="submit">Join</button>
+            <span class="joining_error">{{state.joining_error}}</span>
+        </div>
+      </form>
     </div>
 </template>
 
 <script>
 import { reactive } from 'vue'
+import { users } from '../assets/users'
 
 export default {
   name: "Join",
   setup() {
     const state = reactive({
-      active_user: ''
-    })    
+      active_user: '',
+      joining_error: '',
+      user: users[0]
+    })
+    
+    function joinChat(){
+      if(state.active_user != null && state.active_user.length > 3 && state.active_user.length < 12) {
+        state.user.username = state.active_user
+        state.active_user = ''
+        state.joining_error = ''
+        console.log("User joined successfully!")
+      }else {
+        state.joining_error = "Please! Use a valid username."
+      }
+    }
 
     return {
       state,
+      joinChat
     }
   },
 }
@@ -73,7 +88,7 @@ export default {
   border-color: #87bfff;
   width: 250px;
 }
-.box input[type = "submit"]{
+.box button[type = "submit"]{
   border:0;
   background: none;
   display: block;
@@ -88,16 +103,19 @@ export default {
   transition: 0.25s;
   cursor: pointer;
 }
-.box input[type = "submit"]:focus{
+.box button[type = "submit"]:focus{
   border-color: #87bfff;
 }
-.box input[type = "submit"]:hover{
+.box button[type = "submit"]:hover{
   /* background: #D4AC0D; */
   border-radius: 24px;
 }
-a{
+button{
   text-decoration: none;
 }
 
+.joining_error {
+  color: red;
+}
 
 </style>
