@@ -25,12 +25,12 @@ export default {
     })
     
     function joinChat(){
-      if(state.active_user != null && state.active_user.length > 3 && state.active_user.length < 12) {
+      if(state.active_user != null && state.active_user.length >= 3 && state.active_user.length <= 20) {
         state.user.username = state.active_user
         state.active_user = ''
         state.joining_error = ''
-        console.log("User joined successfully!")
-      }else {
+        this.$router.push('/chat')       
+      } else {
         state.joining_error = "Please! Use a valid username."
       }
     }
@@ -69,7 +69,7 @@ export default {
   font-weight: 500;
   text-align: center;
 }
-.box input[type = "text"],.box input[type = "password"]{
+.box input[type = "text"]{
   border:0;
   background: none;
   display: block;
@@ -87,6 +87,9 @@ export default {
 .box input[type = "text"]:focus{
   border-color: #87bfff;
   width: 250px;
+}
+.box input[type = "text"]::placeholder{
+  opacity: 0.6;
 }
 .box button[type = "submit"]{
   border:0;
