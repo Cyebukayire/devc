@@ -14,6 +14,7 @@
 <script>
 import { reactive } from 'vue'
 import { users } from '../assets/users'
+import router from '../router/index'
 
 export default {
   name: "Join",
@@ -27,9 +28,11 @@ export default {
     function joinChat(){
       if(state.active_user != null && state.active_user.length >= 3 && state.active_user.length <= 20) {
         state.user.username = state.active_user
+        this.$store.commit('user', state.username)
         state.active_user = ''
         state.joining_error = ''
-        this.$router.push('/chat')       
+        // this.$router.push('/chat')       
+        router.push({ name: 'chat'})
       } else {
         state.joining_error = "Please! Use a valid username."
       }
