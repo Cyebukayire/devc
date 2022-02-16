@@ -20,7 +20,6 @@
 import { users } from '../assets/users'
 import Message from '../components/Message.vue'
 import CreateMessage from '../components/CreateMessage.vue'
-// import { reactive } from 'vue'
 
 export default {
 	name: 'Chat',
@@ -29,8 +28,6 @@ export default {
 		CreateMessage
 	},
 	setup() {
-		// const state = reactive({
-		// })
 		return {
 			users
 		}		
